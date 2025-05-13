@@ -85,59 +85,46 @@
       }
     }
 
-    /* Flashing Highlight animation */
-    @keyframes highlight {
+    /* Highlighting animation for each line or word */
+    @keyframes highlightLine {
       0% {
+        transform: translateY(0);
         color: #3c2c1c;
-        text-shadow: none;
+        font-size: 16px;
       }
       50% {
+        transform: translateY(-5px);
         color: #f57c00;
-        text-shadow: 0 0 10px #f57c00, 0 0 20px #f57c00;
+        font-size: 18px;
       }
       100% {
+        transform: translateY(0);
         color: #3c2c1c;
-        text-shadow: none;
+        font-size: 16px;
       }
     }
 
-    /* Apply the animation to specific text */
+    /* Animation for hovering words and lines */
     .highlight-text {
+      animation: highlightLine 2s ease-out infinite;
+      display: inline-block;
       font-weight: bold;
-      animation: highlight 1.5s infinite alternate;
     }
 
-    /* Animating the text size with a "zooming" effect */
-    @keyframes zoomText {
-      0% {
-        transform: scale(1);
-        opacity: 0.5;
-      }
-      25% {
-        transform: scale(1.2);
-        opacity: 1;
-      }
-      50% {
-        transform: scale(1);
-        opacity: 0.7;
-      }
-      75% {
-        transform: scale(1.2);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 0.5;
-      }
+    /* Highlight effect for specific words */
+    .highlight-word {
+      color: #f57c00;
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    /* Apply the "zoomText" animation to all text */
+    /* Apply animation for line and word effects */
     .zoom-text {
       display: inline-block;
-      animation: zoomText 3s ease-in-out infinite;
+      animation: highlightLine 2s ease-out infinite alternate;
     }
 
-    /* Creating a dashed separator line between the two sections */
+    /* Dashed separator line between sections */
     .separator {
       height: 100%;
       width: 2px;
@@ -145,7 +132,7 @@
       margin: 0 30px;
     }
 
-    /* Add rounded borders to the entire container for a more polished look */
+    /* Container rounded corners */
     .container {
       border-radius: 20px;
       overflow: hidden;
@@ -189,7 +176,7 @@
         জ্ঞানচর্চা কেন্দ্র “চিন্তাপ্রকাশ”-এর উদ্যোগে<br>
         লেখক ও গবেষক মফিজুর রহমান কুনু’র<br>
         (সভাপতি, চিন্তাপ্রকাশ) সম্প্রতি প্রকাশিত গ্রন্থ<br>
-        <strong class="highlight-text">“বাঙালির ধর্ম, সংস্কৃতি ও জাতীয়তার সংকট”</strong><br>
+        <span class="highlight-word">“বাঙালির ধর্ম, সংস্কৃতি ও জাতীয়তার সংকট”</span><br>
         এর ওপর এক আলোচনা<br>
         অনুষ্ঠানের আয়োজন করা হয়েছে।
       </p>
