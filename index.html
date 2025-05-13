@@ -105,18 +105,6 @@
       transition: transform 0.3s ease;
     }
 
-    /* Styling for "প্রিয় সুধী" and "আলোচক" sections */
-    .left h2, .right h2 {
-      color: #f57c00;
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-
-    .left p, .right p {
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
     /* Flashing Highlight animation */
     @keyframes highlight {
       0% {
@@ -139,6 +127,35 @@
       animation: highlight 1.5s infinite alternate;
     }
 
+    /* Animating the text size with a "zooming" effect */
+    @keyframes zoomText {
+      0% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      25% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      75% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+    }
+
+    /* Apply the "zoomText" animation to all text */
+    .zoom-text {
+      display: inline-block;
+      animation: zoomText 3s ease-in-out infinite;
+    }
   </style>
 </head>
 <body>
@@ -169,7 +186,7 @@
     <!-- Right Column -->
     <div class="right">
       <h2>প্রিয় সুন্ধী,</h2>
-      <p>
+      <p class="zoom-text">
         শুভেচ্ছা নেবেন।<br><br>
         জ্ঞানচর্চা কেন্দ্র “চিন্তাপ্রকাশ”-এর উদ্যোগে<br>
         লেখক ও গবেষক মফিজুর রহমান কুনু’র<br>
@@ -178,7 +195,7 @@
         এর ওপর এক আলোচনা<br>
         অনুষ্ঠানের আয়োজন করা হয়েছে।
       </p>
-      <p>
+      <p class="zoom-text">
         উক্ত “মুখ-আলোচনা” অনুষ্ঠানে আপনার<br>
         সদয় উপস্থিতি একান্ত কাম্য।
       </p>
@@ -189,7 +206,6 @@
         আহ্বায়ক, “মুখ-আলোচনা” আয়োজক কমিটি
       </div>
     </div>
-
   </div>
 
 </body>
