@@ -116,6 +116,29 @@
       font-size: 18px;
       line-height: 1.5;
     }
+
+    /* Flashing Highlight animation */
+    @keyframes highlight {
+      0% {
+        color: #3c2c1c;
+        text-shadow: none;
+      }
+      50% {
+        color: #f57c00;
+        text-shadow: 0 0 10px #f57c00, 0 0 20px #f57c00;
+      }
+      100% {
+        color: #3c2c1c;
+        text-shadow: none;
+      }
+    }
+
+    /* Apply the animation to specific text */
+    .highlight-text {
+      font-weight: bold;
+      animation: highlight 1.5s infinite alternate;
+    }
+
   </style>
 </head>
 <body>
@@ -151,7 +174,7 @@
         জ্ঞানচর্চা কেন্দ্র “চিন্তাপ্রকাশ”-এর উদ্যোগে<br>
         লেখক ও গবেষক মফিজুর রহমান কুনু’র<br>
         (সভাপতি, চিন্তাপ্রকাশ) সম্প্রতি প্রকাশিত গ্রন্থ<br>
-        <strong>“বাঙালির ধর্ম, সংস্কৃতি ও জাতীয়তার সংকট”</strong><br>
+        <strong class="highlight-text">“বাঙালির ধর্ম, সংস্কৃতি ও জাতীয়তার সংকট”</strong><br>
         এর ওপর এক আলোচনা<br>
         অনুষ্ঠানের আয়োজন করা হয়েছে।
       </p>
