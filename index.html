@@ -1,177 +1,186 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>মুখ-আলোচনা আমন্ত্রণ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      background: #fdf7f1;
-      font-family: 'Hind Siliguri', sans-serif;
-      color: #3c2c1c;
-      overflow-x: hidden;
-    }
-    .container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: auto;
-      background: #fdf7f1;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-      animation: containerAnimation 1s ease-out forwards;
-    }
-    .left, .right {
-      flex: 1 1 45%;
-      padding: 30px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-      transform: translateY(50px);
-      opacity: 0;
-      animation: slideUp 1s ease-out forwards;
-    }
-    .left {
-      animation-delay: 0.2s;
-    }
-    .right {
-      animation-delay: 0.4s;
-    }
-    h1, h2, h3 {
-      margin-top: 0;
-      font-weight: bold;
-    }
-    ul {
-      padding-left: 20px;
-      list-style: none;
-    }
-    .icon {
-      margin-right: 5px;
-    }
-    .event {
-      margin-top: 30px;
-      font-size: 18px;
-    }
-    .footer {
-      margin-top: 40px;
-      transition: transform 0.3s ease;
-    }
-    .footer:hover {
-      transform: scale(1.05);
-    }
-    .title-logo {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .border-decor {
-      border-top: 2px dashed #aaa;
-      margin: 20px 0;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>মুখ-আলোচনা আমন্ত্রণ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #fdf7f1;
+      font-family: 'Hind Siliguri', sans-serif;
+      color: #3c2c1c;
+      overflow-x: hidden;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+      background: #fdf7f1;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      animation: containerAnimation 1s ease-out forwards;
+    }
+    .left, .right {
+      flex: 1 1 45%;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      transform: translateY(50px);
+      opacity: 0;
+      animation: slideUp 1s ease-out forwards;
+    }
+    .left {
+      animation-delay: 0.2s;
+    }
+    .right {
+      animation-delay: 0.4s;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 20px;
+      list-style: none;
+    }
+    .icon {
+      margin-right: 5px;
+    }
+    .event {
+      margin-top: 30px;
+      font-size: 18px;
+    }
+    .footer {
+      margin-top: 40px;
+      transition: transform 0.3s ease;
+    }
+    .footer:hover {
+      transform: scale(1.05);
+    }
+    .title-logo {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .border-decor {
+      border-top: 2px dashed #aaa;
+      margin: 20px 0;
+    }
 
-    /* Keyframe animations */
-    @keyframes containerAnimation {
-      0% {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    /* Keyframe animations */
+    @keyframes containerAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-    @keyframes slideUp {
-      0% {
-        opacity: 0;
-        transform: translateY(100px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-    /* Hover effect for list items */
-    ul li {
-      padding: 10px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
+    /* Hover effect for list items */
+    ul li {
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
 
-    ul li:hover {
-      background-color: #ffeb3b;
-      transform: translateX(10px);
-    }
+    ul li:hover {
+      background-color: #ffeb3b;
+      transform: translateX(10px);
+    }
 
-    /* Hover effect for title logo */
-    .title-logo:hover {
-      transform: scale(1.1);
-      transition: transform 0.3s ease;
-    }
+    /* Hover effect for title logo */
+    .title-logo:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
 
-  </style>
+    /* Styling for "প্রিয় সুধী" and "আলোচক" sections */
+    .left h2, .right h2 {
+      color: #f57c00;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .left p, .right p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="container">
+    <!-- Left Column -->
+    <div class="left">
+      <div class="title-logo">
+        <img src="https://i.imgur.com/sVsyIOx.png" alt="চিন্তাপ্রকাশ লোগো" height="40"><br>
+        প্রকৃতি ও মানব বিষয়ক জ্ঞানচর্চা কেন্দ্র
+      </div>
+      <h2>আলোচক:</h2>
+      <ul>
+        <li><strong>আমজাদ হোসেন</strong><br>বিশিষ্ট লেখক ও গবেষক</li>
+        <li><strong>প্রফেসর শামীমা আখতার</strong><br>বিভাগীয় প্রধান, ইতিহাস বিভাগ,<br>সরকারি মাইকেল মধুসূদন কলেজ, যশোর</li>
+        <li><strong>প্রফেসর ড. এম. আানুল্লাহ</strong><br>অধ্যক্ষ, কোটচাঁদপুর সরকারি কলেজ, ঝিনাইদহ</li>
+      </ul>
+      <h3>সভাপতি: অ্যাড. আজিজুল ইসলাম</h3>
+      <p>আহ্বায়ক, “মুখ-আলোচনা” আয়োজক কমিটি</p>
 
-    <!-- Left Column -->
-    <div class="left">
-      <div class="title-logo">
-        <img src="https://i.imgur.com/sVsyIOx.png" alt="চিন্তাপ্রকাশ লোগো" height="40"><br>
-        প্রকৃতি ও মানব বিষয়ক জ্ঞানচর্চা কেন্দ্র
-      </div>
-      <h2>আলোচক:</h2>
-      <ul>
-        <li><strong>আমজাদ হোসেন</strong><br>বিশিষ্ট লেখক ও গবেষক</li>
-        <li><strong>প্রফেসর শামীমা আখতার</strong><br>বিভাগীয় প্রধান, ইতিহাস বিভাগ,<br>সরকারি মাইকেল মধুসূদন কলেজ, যশোর</li>
-        <li><strong>প্রফেসর ড. এম. আানুল্লাহ</strong><br>অধ্যক্ষ, কোটচাঁদপুর সরকারি কলেজ, ঝিনাইদহ</li>
-      </ul>
-      <h3>সভাপতি: অ্যাড. আজিজুল ইসলাম</h3>
-      <p>আহ্বায়ক, “মুখ-আলোচনা” আয়োজক কমিটি</p>
+      <div class="event">
+        📅 ১৭ই মে, শনিবার<br>
+        🕓 বিকাল ৪:০০ ঘটিকায়<br>
+        📍 যশোর প্রেসক্লাব (২য় তলা)
+      </div>
+    </div>
 
-      <div class="event">
-        📅 ১৭ই মে, শনিবার<br>
-        🕓 বিকাল ৪:০০ ঘটিকায়<br>
-        📍 যশোর প্রেসক্লাব (২য় তলা)
-      </div>
-    </div>
+    <!-- Right Column -->
+    <div class="right">
+      <h2>প্রিয় সুন্ধী,</h2>
+      <p>
+        শুভেচ্ছা নেবেন।<br><br>
+        জ্ঞানচর্চা কেন্দ্র “চিন্তাপ্রকাশ”-এর উদ্যোগে<br>
+        লেখক ও গবেষক মফিজুর রহমান কুনু’র<br>
+        (সভাপতি, চিন্তাপ্রকাশ) সম্প্রতি প্রকাশিত গ্রন্থ<br>
+        <strong>“বাঙালির ধর্ম, সংস্কৃতি ও জাতীয়তার সংকট”</strong><br>
+        এর ওপর এক আলোচনা<br>
+        অনুষ্ঠানের আয়োজন করা হয়েছে।
+      </p>
+      <p>
+        উক্ত “মুখ-আলোচনা” অনুষ্ঠানে আপনার<br>
+        সদয় উপস্থিতি একান্ত কাম্য।
+      </p>
 
-    <!-- Right Column -->
-    <div class="right">
-      <h2>প্রিয় সুন্ধী,</h2>
-      <p>
-        শুভেচ্ছা নেবেন।<br><br>
+      <div class="footer">
+        শুভেচ্ছান্তে,<br>
+        <strong>অ্যাড. আজিজুল ইসলাম</strong><br>
+        আহ্বায়ক, “মুখ-আলোচনা” আয়োজক কমিটি
+      </div>
+    </div>
 
-        জ্ঞানচর্চা কেন্দ্র “চিন্তাপ্রকাশ”-এর উদ্যোগে<br>
-        লেখক ও গবেষক মফিজুর রহমান কুনু’র<br>
-        (সভাপতি, চিন্তাপ্রকাশ) সম্প্রতি প্রকাশিত গ্রন্থ<br>
-        <strong>“বাঙালির ধর্ম, সংস্কৃতি ও জাতীয়তার সংকট”</strong><br>
-        এর ওপর এক আলোচনা<br>
-        অনুষ্ঠানের আয়োজন করা হয়েছে।
-      </p>
-      <p>
-        উক্ত “মুখ-আলোচনা” অনুষ্ঠানে আপনার<br>
-        সদয় উপস্থিতি একান্ত কাম্য।
-      </p>
-
-      <div class="footer">
-        শুভেচ্ছান্তে,<br>
-        <strong>অ্যাড. আজিজুল ইসলাম</strong><br>
-        আহ্বায়ক, “মুখ-আলোচনা” আয়োজক কমিটি
-      </div>
-    </div>
-
-  </div>
+  </div>
 
 </body>
 </html>
