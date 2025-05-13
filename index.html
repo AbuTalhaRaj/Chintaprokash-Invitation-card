@@ -16,31 +16,31 @@
     }
     .container {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
-      background: #fdf7f1;
       padding: 20px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
-      animation: containerAnimation 1s ease-out forwards;
+      background: #fdf7f1;
+      animation: containerAnimation 1.5s ease-out forwards;
     }
     .left, .right {
-      flex: 1 1 45%;
+      flex: 0 0 48%;
       padding: 30px;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-      transform: translateY(50px);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       opacity: 0;
-      animation: slideUp 1s ease-out forwards;
+      animation: slideIn 2s ease-out forwards;
+      transform: scale(0);
     }
     .left {
-      animation-delay: 0.2s;
+      animation-delay: 0.3s;
     }
     .right {
-      animation-delay: 0.4s;
+      animation-delay: 0.6s;
     }
     h1, h2, h3 {
       margin-top: 0;
@@ -79,22 +79,22 @@
     @keyframes containerAnimation {
       0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: scale(0);
       }
       100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
       }
     }
 
-    @keyframes slideUp {
+    @keyframes slideIn {
       0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: scale(0) translateX(-50px);
       }
       100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1) translateX(0);
       }
     }
 
@@ -121,12 +121,12 @@
     /* Styling for "প্রিয় সুধী" and "আলোচক" sections */
     .left h2, .right h2 {
       color: #f57c00;
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 20px;
     }
 
     .left p, .right p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
     }
   </style>
