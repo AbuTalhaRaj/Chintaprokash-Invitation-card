@@ -23,7 +23,7 @@ body {
     border: 1px solid;
     transform-style: preserve-3d;
     will-change: transform;
-    transition: transform 250ms;
+    transition: transform 30000ms;
     box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
