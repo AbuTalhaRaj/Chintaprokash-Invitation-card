@@ -17,6 +17,10 @@ body {
     transition: transform 60s ease-in-out;
 }
 
+.envelope:hover .card-wrapper {
+    transform: rotate(-90deg);
+}
+
 .card {
     width: 180px;
     height: 280px;
