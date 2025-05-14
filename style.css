@@ -248,8 +248,8 @@ body {
     top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 46px;
-    height: 42px; 
+    width: 82px;
+    height: 72px; 
     background-image: url("heart-seal.png");
     background-size: cover; 
     background-repeat: no-repeat;
