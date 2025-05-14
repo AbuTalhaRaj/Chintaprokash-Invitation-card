@@ -109,8 +109,8 @@ body {
 
 /* Envelope styling */
 .envelope {
-    width: 350px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     background-color: #fff;
     display: grid;
     place-content: center;
