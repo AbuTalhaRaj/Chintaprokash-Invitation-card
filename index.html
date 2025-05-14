@@ -1,26 +1,21 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Open Graph for WhatsApp/Facebook -->
     <meta property="og:title" content="চিন্তা প্রকাশ আমন্ত্রণপত্র" />
     <meta property="og:description" content="আমাদের অনুষ্ঠানে আপনাকে সাদর আমন্ত্রণ জানানো যাচ্ছে। বিস্তারিত জানতে এখানে ক্লিক করুন।" />
     <meta property="og:image" content="https://s14.gifyu.com/images/bsKCs.jpg" />
     <meta property="og:url" content="https://abutalharaj.github.io/Chintaprokash-Invitation-card/" />
     <meta property="og:type" content="website" />
-
     <!-- PWA support -->
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#2c3e50" />
-
     <title>Digital Invitation card</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Petemoss&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-    
 <body>
     <div class="envelope">
         <div class="envelope-lid"></div>
@@ -31,8 +26,7 @@
                     <div class="card-side card-side-primary">
                         <h1 class="card-title">
                             <span class="card-title-secondary">চিন্তা-প্রকাশের পক্ষ থেকে আপনাকে</span>
-                            <span class="card-title-main">স্বাগতম<span
-                                  class="card-title-apostrophe"></span></span>
+                            <span class="card-title-main">স্বাগতম<span class="card-title-apostrophe"></span></span>
                             <span class="card-title-secondary">Made By Talha</span>
                         </h1>
                     </div>
@@ -42,10 +36,9 @@
                     <p>প্রিয় সুধী,</p>
                     <p>শুভেচ্ছা নেবেন। জ্ঞানচর্চা কেন্দ্র "চিন্তাপ্রকাশ"-এর উদ্যোগে লেখক ও গবেষক মফিজুর রহমান রুন্নু'র (সভাপতি, চিন্তাপ্রকাশ) সম্প্রতি প্রকাশিত গ্রন্থ "বাঙালির ধর্ম, সংস্কৃতি ও জাতীয়তার সংকট" এর ওপর এক আলোচনা অনুষ্ঠানের আয়োজন করা হয়েছে। উক্ত "গ্রন্থ-আলোচনা" অনুষ্ঠানে আপনার সবান্ধব উপস্থিতি একান্ত কাম্য।</p>
                     <p>শুভেচ্ছান্তে, এ্যাড. আজিজুল ইসলাম (আহবায়ক, "গ্রন্থ-আলোচনা" আয়োজক কমিটি)</p>
-                    <p>🗓️১৭ই মে, শনিবার<p>
+                    <p>🗓️১৭ই মে, শনিবার</p>
                     <p>🕒বিকাল ৪:০০ ঘটিকায়</p>
                     <p>📍যশোর প্রেসক্লাব (২য় তলা)</p>
-
                     <p>আলোচক:</p>
                     <p>আমজাদ হোসেন (বিশিষ্ট লেখক ও গবেষক)</p>
                     <p>প্রফেসর শামীমা আখতার (বিভাগীয় প্রধান, ইতিহাস বিভাগ, সরকারি মাইকেল মধুসূদন কলেজ, যশোর)</p>
@@ -54,8 +47,15 @@
                 </div>
             </div>
         </div>
-        <div class="heart-seal"></div> </div>
-
-       <script  src="./script.js"></script>
+        <div class="heart-seal"></div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('✅ Service Worker Registered'))
+          .catch((error) => console.error('Service Worker registration failed:', error));
+      }
+    </script>
 </body>
 </html>
