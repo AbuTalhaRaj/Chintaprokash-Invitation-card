@@ -22,14 +22,14 @@ body {
     background-color: #fff;
     border: 1px solid;
     transform-style: preserve-3d;
-    will-change: transform 60s;
-    transition: transform 60s;
+    will-change: transform;
+    transition: transform 250ms;
     box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .envelope:hover .card {
     transform: rotateY(-15deg);
-    transition-delay: 100ms;
+    transition-delay: 1750ms;
 }
 
 /* Card cover styling */
