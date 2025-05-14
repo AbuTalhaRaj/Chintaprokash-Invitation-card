@@ -1,0 +1,77 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbeee0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.envelope-container {
+  perspective: 1000px;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #d94a4a;
+  border-radius: 5px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100px;
+  background: #c13c3c;
+  border-bottom: 3px solid #a62a2a;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+.letter {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.5s ease 1s;
+  z-index: 1;
+}
+
+.letter img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+button#openBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: #fff;
+  color: #c13c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+button#openBtn:hover {
+  background: #ffe0e0;
+}

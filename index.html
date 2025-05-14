@@ -1,105 +1,23 @@
+
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ইনভিটেশন খাম</title>
-  <style>
-    body {
-      background: #fbeee6;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .envelope {
-      position: relative;
-      width: 300px;
-      height: 200px;
-      background: #ffdac1;
-      border: 2px solid #e6a57e;
-      border-radius: 8px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.4s ease;
-    }
-
-    .envelope:hover {
-      transform: scale(1.03);
-    }
-
-    .flap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: #ffc3a0;
-      clip-path: polygon(0 0, 100% 0, 50% 100%);
-      transition: transform 0.8s ease;
-      transform-origin: top;
-      z-index: 2;
-    }
-
-    .envelope.open .flap {
-      transform: rotateX(-180deg);
-    }
-
-    .click-text {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-weight: bold;
-      color: #663300;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.05); opacity: 0.6; }
-    }
-
-    .card {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      border-top: 2px solid #d17d50;
-      opacity: 0;
-      transform: translateY(0);
-      transition: all 0.7s ease;
-      z-index: 1;
-    }
-
-    .envelope.open .card {
-      top: 0;
-      opacity: 1;
-      transform: translateY(-10px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 0 0 8px 8px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Envelope Invitation</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-<div class="envelope" onclick="this.classList.toggle('open')">
-  <div class="flap"></div>
-  <div class="click-text">Click Here</div>
-  <div class="card">
-    <img src="IMAGE_LINK_HERE" alt="ইনভাইটেশন কার্ড">
+  <div class="envelope-container">
+    <div class="envelope" id="envelope">
+      <div class="flap" id="flap"></div>
+      <div class="letter">
+        <p>আপনার আমন্ত্রণপত্র প্রস্তুত!</p>
+        <img src="https://s14.gifyu.com/images/bsKCs.jpg" alt="Invitation Image"/>
+      </div>
+      <button id="openBtn">Click Here</button>
+    </div>
   </div>
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
