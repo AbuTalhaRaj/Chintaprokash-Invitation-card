@@ -29,7 +29,7 @@ body {
 
 .envelope:hover .card {
     transform: rotateY(-15deg);
-    transition-delay: 1750ms;
+    transition-delay: 60000ms;
 }
 
 /* Card cover styling */
