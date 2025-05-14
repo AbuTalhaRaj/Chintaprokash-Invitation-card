@@ -1,7 +1,16 @@
+const envelope = document.querySelector('.envelope');
+const heartSeal = document.querySelector('.heart-seal');
+let timeoutId;
 
-document.getElementById("openBtn").addEventListener("click", function () {
-  const flap = document.getElementById("flap");
-  const letter = document.querySelector(".letter");
-  flap.style.transform = "rotateX(-180deg)";
-  letter.style.opacity = "1";
+envelope.addEventListener('mouseover', () => {
+    clearTimeout(timeoutId);
+    heartSeal.style.opacity = 0;
 });
+
+envelope.addEventListener('mouseout', () => {
+    timeoutId = setTimeout(() => {
+        heartSeal.style.opacity = 1;
+    }, 1500); 
+});
+
+heartSeal.style.transition = 'opacity 0.3s ease';
