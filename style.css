@@ -40,7 +40,7 @@ body {
     outline: 1px solid #000;
     transform-style: preserve-3d;
     transform-origin: left;
-    transition: transform 500ms 0ms;
+    transition: transform 60000ms 0ms;
 }
 
 .envelope:hover .card-cover {
